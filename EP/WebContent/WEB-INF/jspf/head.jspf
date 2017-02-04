@@ -1,0 +1,32 @@
+<%@ include file="/WEB-INF/jspf/directive/page.jspf" %>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf" %>
+
+<head>
+
+	<title>
+		${title}
+	</title>
+	
+<%--=========================================================================== 
+Bind CSS document.
+===========================================================================--%> 
+	<link rel="stylesheet" type="text/css" media="screen" href="res/css/ep.css"/>
+	<link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Rancho&effect=fire">
+	
+<%--=========================================================================== 
+Bind JavaScript document.
+===========================================================================--%> 
+	<script src="res/js/jquery.js"></script>
+    <script src="res/js/ep.js"></script>
+    
+    
+    
+	
+</head>
+
+
+
+
+
+

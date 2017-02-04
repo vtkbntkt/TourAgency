@@ -1,0 +1,734 @@
+.userinfo {
+	margin: -8px -7px 0px -7px;
+	padding: 10px 50px;
+	background-color: #F0F0E9;
+	font-family: Arial, sans-serif;
+	font-size: 0.9em;
+	text-align: right;
+}
+
+.userinfo img {
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+.userinfo ul {
+	list-style-type: none;
+	margin: 0;
+}
+
+.userinfo li {
+	display: inline;
+	padding-left: 20px;
+}
+
+.userinfo a {
+	text-decoration: none;
+	color: black;
+}
+
+.userinfo a:hover {
+	color: Orange;
+}
+
+/*---------------------------Header---------------------------------*/
+.navigation {
+	margin: 0px 50px;
+	border-bottom: 1px solid #F0F0E9;
+	padding: 10px 0px;
+}
+
+.navigation ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation img {
+	float: left;
+}
+
+.navigation select {
+	color: rgb(187, 187, 186);
+	border-radius: 1px;
+	font-family: Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	/*margin-left: 20%; /*turn to right*/
+	padding-left: 10px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.navigation select:hover {
+	color: White;
+	background-color: orange;
+	cursor: pointer;
+}
+
+.navigation select:focus {
+	color: rgb(187, 187, 186);
+	background-color: White;
+	outline-color: orange;
+}
+
+.navigation a {
+	float: right;
+	padding-left: 30px;
+	color: grey;
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+}
+
+.navigation a:hover {
+	color: Orange;
+}
+
+/*---------------------------Front image---------------------------------*/
+.frontimage {
+	
+}
+
+.frontimage img {
+	display: block;
+	margin: 0 auto;
+	/*width: 93%;*/
+	/* border: 1px solid black;*/
+}
+
+.frontimage ~ .frontimage {
+	width: 92%;
+	/*height:100%;*/
+	margin: 0px 50px 0px 50px;
+	display: none;
+	border-top: 2px solid #F0F0E9;
+	/* styles of the others (must cancel the styles of the first rule) */
+}
+
+/*---------------------------Content of index page---------------------------------*/
+.filter {
+	/*display: inline;*/
+	border: 1px solid #F0F0E9;
+	border-radius: 4px;
+}
+/*
+.content ~ .content {
+	display: none;
+}*/
+.filter input[type=text], .filter input[type=number], .filter select {
+	/*width: 100%;*/
+	padding: 10px 14px;
+	margin: 5px 5px;
+	/*display: inline;*/
+	border: 1px solid orange; /*#F0F0E9;*/
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: #F0F0E9;
+	/* font-size: 16px;*/
+	color: grey;
+
+	/* vertical-align: middle;*/
+}
+
+.filter input[type=text], .filter input[type=number] {
+	/*width: 50%;*/
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.filter input[type=text], .filter input[type=number], .filter select:focus
+	{
+	outline: none;
+}
+
+.filter input[type=submit] {
+	width: 15%;
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	margin: 8px 10px;
+	border: none;
+	/*border-radius: 4px;*/
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.filter input[type=submit]:hover {
+	background-color: #EBEBEB;
+	color: grey;
+}
+
+.filter input[type=submit]:focus {
+	outline: none;
+}
+
+.filter input[type=range] {
+	
+}
+
+/*---------------------------Signform---------------------------------*/
+.signform {
+	/*border-top: 2px solid #F0F0E9;*/
+	padding: 20px 0px;
+	margin: 20px 450px;
+}
+
+.signform input[type=text], .signform input[type=password], .signform input[type=email],
+	.signform select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0px;
+	display: inline-block;
+	border: 1px solid #F0F0E9;
+	/*border-radius: 4px;*/
+	box-sizing: border-box;
+	background-color: #F0F0E9;
+	/* font-size: 16px;*/
+	color: grey;
+}
+
+.signform textarea {
+	width: 100%;
+	height: 150px;
+	padding: 12px 20px;
+	margin: 8px 0px;
+	box-sizing: border-box;
+	border: 1px solid #F0F0E9;
+	/*border-radius: 4px;*/
+	background-color: #F0F0E9;
+	font-size: 16px;
+	color: grey;
+	resize: none;
+}
+
+.captcha {
+	border: 1px solid #F0F0E9;
+	padding: 10px;
+	margin: 8px 0px;
+}
+
+.captcha img {
+	/*margin: auto;*/
+	width: 100%;
+	padding: 0px;
+	cursor: url('../img/cursor.png'), auto;
+}
+
+.file {
+	position: relative;
+}
+
+.file label {
+	background: orange; /*#39D2B4;*/
+	padding: 5px 20px;
+	color: #fff;
+	font-weight: bold;
+	font-size: .9em;
+	transition: all .4s;
+}
+
+.file input {
+	position: absolute;
+	display: inline-block;
+	left: 0;
+	top: 0;
+	opacity: 0.01;
+	cursor: pointer;
+}
+
+.file input:hover+label, .file input:focus+label {
+	background: #EBEBEB; /*#34495E;*/
+	color: grey; /*#39D2B4;*/
+}
+
+.signform textarea, input[type=text], .signform select, .signform input[type=email],
+	.signform input[type=password]:focus {
+	outline: none;
+}
+
+.signform input[type=submit] {
+	width: 30%;
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	margin: 8px 0px;
+	border: none;
+	/*border-radius: 4px;*/
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.signform input[type=submit]:hover {
+	background-color: #EBEBEB;
+	color: grey;
+}
+
+.signform input[type=submit]:focus {
+	outline: none;
+}
+
+/*---------------------------Msg---------------------------------*/
+.errormsg {
+	color: red;
+}
+
+.succmsg {
+	color: green;
+}
+
+/*---------------------------Table---------------------------------*/
+.mytable {
+	/*margin-top: 30px;*/
+	margin: 0px;
+	border-collapse: collapse;
+	width: 100%;
+	font-family: Arial, sans-serif;
+	font-size: 0.95em;
+	border: 1px solid #F0F0E9;
+}
+
+.mytable th, td {
+	/*color:grey;*/
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.mytable th {
+	border-bottom: 2px solid #ddd;
+	font-weight: bold;
+}
+
+.mytable td {
+	color: grey;
+}
+
+.mytable a {
+	color: grey;
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+}
+
+.mytable a:hover {
+	color: Orange;
+}
+
+.mytable tr:hover {
+	background-color: #EBEBEB;
+	/*color:orange;*/
+}
+
+#deleteBth {
+	color: black;
+}
+
+#deleteBth:hover {
+	color: Orange;
+	cursor: pointer;
+	border: 1px solid #F0F0E9;
+}
+
+/*---------------------------tooltip---------------------------------*/
+.tooltip {
+	position: relative;
+	/*display: inline-block;
+    border-bottom: 1px dotted black;*/
+}
+
+.tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: orange;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	top: -5px;
+	right: 105%;
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+/*------tooltip for filter---------*/
+.tooltipf {
+	position: relative;
+	display: inline-block;
+	margin: 10px 10px;
+}
+
+.tooltipf .tooltiptext {
+	visibility: hidden;
+	width: 100px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	background-color: orange;
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -50px;
+}
+
+.tooltipf:hover .tooltiptext {
+	visibility: visible;
+}
+
+/*---------------------------singl msg---------------------------------*/
+.singlemessage {
+	margin: 0px;
+	border: 1px solid #ddd;
+	padding: 0px 10px;
+	overflow: auto;
+}
+
+.singlemessage p {
+	margin: 0px;
+}
+
+footer {
+	padding: 0.5em;
+	margin: 0px 50px;
+	color: orange;
+	background-color: #F0F0E9;
+	clear: left;
+	text-align: center;
+}
+
+nav {
+	float: left;
+	max-width: 260px;
+	margin: 20px 50px;
+	padding: 1em 0em;
+	/*border: 1px solid #F0F0E9;*/
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0px 50px;
+	margin: 0px;
+	border: 1px solid #F0F0E9;
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 0.95em;
+	font-weight: bold;
+}
+
+nav li {
+	margin-top: 10px; /*dist between li element vertically*/
+}
+
+nav ul a {
+	text-decoration: none;
+	color: grey;
+}
+
+nav a:hover {
+	color: Orange;
+}
+
+h2 {
+	width: 100%;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	text-transform: uppercase;
+	color: Orange;
+	font-size: large;
+	font-weight: bold;
+	border-bottom: 2px solid #F0F0E9;
+	line-height: 0.1em;
+	margin: 0px 0 20px;
+	text-transform: uppercase;
+	color: Orange;
+	font-size: large;
+	font-weight: bold;
+}
+
+h2 span {
+	background: #fff;
+	padding: 0 10px;
+}
+
+article {
+	margin: 20px 50px 0px 10px;
+	/*border: 1px solid #F0F0E9;*/
+	padding: 1em 0em;
+	overflow: hidden;
+}
+
+.button {
+	background-color: orange;
+	border: none;
+	color: white;
+	padding: 6px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.button:hover {
+	background-color: #EBEBEB;
+	color: grey;
+}
+
+.button:focus {
+	outline: none;
+}
+
+/*-----------------------standart form-----------------*/
+.standartform {
+	margin: 0px 30%;
+	/*border: 1px solid red;*/
+	text-align: left;
+}
+
+.standartform input[type=text], .standartform input[type=number],
+	.standartform textarea, .standartform select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #F0F0E9;
+	box-sizing: border-box;
+	background-color: #F0F0E9;
+	color: grey;
+	/*text-align: center; */
+}
+
+.standartform textarea {
+	height: 150px;
+	font-size: 16px;
+	resize: none;
+}
+
+.standartform input[type=text], .standartform input[type=number],
+	.standartform textarea, .standartform select:focus {
+	outline: none;
+}
+
+.standartform input[type=submit] {
+	width: 30%;
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	margin: 8px 0px;
+	border: none;
+	/*border-radius: 4px;*/
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.standartform input[type=submit]:hover {
+	background-color: #EBEBEB;
+	color: grey;
+}
+
+.standartform input[type=submit]:focus {
+	outline: none;
+}
+
+#slideshow {
+	/*margin: 0px auto;*/
+	margin: left;
+	position: relative;
+	width: 850px;
+	height: 453px;
+	padding: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow img {
+	width: 850px;
+	height: 453px;
+}
+
+#slideshow>div {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+}
+
+.tours {
+	border: 1px solid #F0F0E9;
+	padding: 5px;
+	font-family: Arial, sans-serif;
+	margin: 10px 0;
+}
+
+#tours:hover {
+	border: 1px solid orange;
+	/*cursor: pointer;*/
+}
+
+.tours img {
+	width: 160 px;
+	height: 120px;
+	/*vertical-align: middle;*/
+	/*padding-right: 5px;*/
+	/*float: left;*/
+	border: 2px solid #F0F0E9;
+	/*margin:0;*/
+}
+
+.tours ul {
+	list-style-type: none;
+	padding: 0px;
+	display: inline-block;
+	margin: 0 20px;
+}
+
+.tours li {
+	margin-top: 6%;
+	color: grey;
+}
+
+#tourValues li {
+	margin-top: 5%;
+	color: black;
+}
+
+.minibtn {
+	width: 100%;
+	background-color: orange;
+	border: none;
+	color: white;
+	padding: 4px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0px;
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.minibtn:hover {
+	background-color: #EBEBEB;
+	color: grey;
+}
+
+.minibtn:focus {
+	outline: none;
+}
+
+#tourOption {
+	float: right;
+	text-align: center;
+}
+
+#tourOption li {
+	margin-top: 5%;
+}
+
+#tourOption li form {
+	
+}
+
+.tours button {
+	padding: 4px 8px;
+	margin: 0px;
+	font-size: 16px;
+}
+
+ul.pagination {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+ul.pagination li {
+	display: inline;
+}
+
+ul.pagination li a {
+	color: black;
+	float: left;
+	padding: 4px 8px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #ddd;
+	margin: 0 2px;
+}
+
+ul.pagination li a.active {
+	background-color: orange;
+	color: white;
+	border: 1px solid orange;
+}
+
+ul.pagination li a:hover:not(.active){background-color:#ddd;}
+div.center {
+	text-align: center;
+}
+
+/*---------------table option--------------------*/
+.tableoption {
+	padding:0;
+}
+
+.tableoption select {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-radius: 2px;
+	box-sizing: border-box;
+	color: grey;
+	font-family: Arial, sans-serif;
+	font-size: small;
+	font-weight: bold;
+}
+
+.tableoption select:hover {
+	color: White;
+	background-color: orange;
+	cursor: pointer;
+}
+
+.tableoption select:focus {
+	color: rgb(187, 187, 186);
+	background-color: White;
+	outline-color: orange;
+}
+
+.tableoption input[type=submit] {
+	width: 15%;
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	margin: 8px 10px;
+	border: none;
+	/*border-radius: 4px;*/
+	cursor: pointer;
+	transition: all .4s;
+}
+
+.tableoption input[type=submit]:hover {
+	background-color: #EBEBEB;
+	color: grey;
+}
+
+.tableoption input[type=submit]:focus {
+	outline: none;
+}
+
+#pdf:hover{
+
+}
+
+
+

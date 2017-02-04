@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>EP</display-name>
+  <listener>
+    <listener-class>ua.gudkov.fp.listener.ContextListener</listener-class>
+  </listener>
+  <welcome-file-list>
+    <welcome-file>tours</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>captchaTimeOut</param-name>
+    <param-value>120000</param-value>
+  </context-param>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>ua.gudkov.fp.filter.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>AccessFilter</filter-name>
+    <filter-class>ua.gudkov.fp.filter.AccessFilter</filter-class>
+    <init-param>
+      <param-name>admin</param-name>
+      <param-value>/attachments /edit_currency /message_remove /message /messages 
+			/msgreplaying /edit_discount /order_status /users /user_status /tour_status /hotel 
+			/touradding /edit_tour /remove_tour</param-value>
+    </init-param>
+    <init-param>
+      <param-name>manager</param-name>
+      <param-value>/order_status /tour_status /edit_discount</param-value>
+    </init-param>
+    <init-param>
+      <param-name>client</param-name>
+      <param-value>/order_tour</param-value>
+    </init-param>
+    <init-param>
+      <param-name>common</param-name>
+      <param-value>/download_details /logout /orders</param-value>
+    </init-param>
+    <init-param>
+      <param-name>out-of-control</param-name>
+      <param-value>/captcha.jpg /contactus /hotel_photos /tour_photos /language 
+			/login /register /currency /tours /tour /signin.jsp /signup.jsp /contactus.jsp 
+			/res/css/ep.css /res/js/ep.js /res/img/cursor.png /res/img/pdf.png /res/js/jquery.js
+			/res/img/project.png /res/img/travel.jpg /res/img/person.png /res/img/exit.png
+			/res/img/email.png /res/img/acc.png
+			</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>AccessFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

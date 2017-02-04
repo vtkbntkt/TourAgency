@@ -1,0 +1,59 @@
+<%@ page pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jspf/directive/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+
+
+<fmt:message key="nav.home" var="homeValue" />
+<fmt:message key="nav.about" var="aboutValue" />
+<fmt:message key="nav.register" var="regValue" />
+<fmt:message key="nav.signin" var="signValue" />
+<fmt:message key="nav.contact" var="contactValue" />
+
+<%@ include file="/WEB-INF/jspf/userinfo.jspf"%>
+
+
+<div class="navigation">
+	<img src="res/img/project.png">
+	<ul>
+		<li><ep:locale /></li>
+		<li><ep:currency /></li>
+		<c:if test="${empty sessionScope.user}">
+			<li><a href="signup.jsp">${regValue}</a></li>
+			<li><a href="signin.jsp">${signValue}</a></li>
+		</c:if>
+		<li><a href="contactus.jsp">${contactValue}</a></li>
+		<li><a href="#" id="aboutproject">${aboutValue}</a></li>
+		<li><a href="tours">${homeValue}</a></li>
+	</ul>
+</div>
+
+
+
+
+
+
+<div class="frontimage">
+	<img id="go" src="res/img/travel.jpg">
+</div>
+
+<div class="frontimage">
+
+	<p>Турагенство имеет каталог Туров. Для каталога реализовать
+		возможность выборки туров: по типу(отдых, экскурсия, шоппинг); по
+		цене; по количеству человек; по типу гостиницы. Заказчик
+		регистрируется в системе, выбирает Тур и делает Заказ. После заказа
+		тур имеет статус 'зарегистрирован'. Незарегистрированный пользователь
+		не имеет возможности заказывать тур.</p>
+	<p>Заказчик имеет личный кабинет, в котором содержится краткая
+		информация о пользователе, а так же список туров и их текущий статус
+		(зарегистрирован, оплачен, отменен).</p>
+
+	<p>Менеджер определяет тур как 'горящий'. 'Горящие' туры всегда
+		отображаются наверху перечня. Менеджер переводит статус тура из
+		'зарегистрирован' в 'оплачен' или 'отменен'. На каждый заказанный тур
+		определяется скидка с шагом, который определяет менеджер, но не больше
+		процента, который так же определяет менеджер.</p>
+	<p>Администратор системы владеет правами такими же правами, как и
+		менеджер, а так же может: добавить/удалить тур, изменить информацию о
+		туре; блокировать/разблокировать пользователя.</p>
+</div>

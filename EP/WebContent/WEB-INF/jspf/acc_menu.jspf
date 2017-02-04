@@ -1,0 +1,48 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="ep" uri="/WEB-INF/custom.tld"%>
+
+<fmt:message key="menu.orders" var="menuOrdersValue" />
+<fmt:message key="menu.discount" var="menuDiscValue" />
+<fmt:message key="menu.currency" var="menuCurrValue" />
+<fmt:message key="menu.users" var="menuUsersValue" />
+<fmt:message key="menu.tour" var="menuTourValue" />
+<fmt:message key="menu.hotel" var="menuHotelValue" />
+<fmt:message key="menu.msg" var="menuMsgValue" />
+<fmt:message key="menu.menu" var="menuTitleValue" />
+
+
+<nav>
+	<h2>
+		<span>${menuTitleValue}</span>
+	</h2>
+	<ul>
+		<c:choose>
+			<c:when test="${sessionScope.user.roleId == 1}">
+				<li><a href="orders">${menuOrdersValue }</a></li>
+			</c:when>
+			<c:when test="${sessionScope.user.roleId == 2}">
+				<li><a href="orders">${menuOrdersValue }</a></li>
+				<li><a href="edit_discount">${menuDiscValue }</a></li>
+			</c:when>
+			<c:when test="${sessionScope.user.roleId == 0}">
+				<li><a href="orders">${menuOrdersValue }</a></li>
+				<li><a href="edit_discount">${menuDiscValue }</a></li>
+				<li><a href="edit_currency">${menuCurrValue }</a></li>
+				<li><a href="users">${menuUsersValue }</a></li>
+				<li><a href="touradding">${menuTourValue }</a></li>
+				<li><a href="hotel">${menuHotelValue }</a></li>
+				<li><a href="messages">${menuMsgValue }</a></li>
+			</c:when>
+			<c:otherwise>
+							<li><a href="orders">No menu</a></li>
+			
+				 <%-- <c:redirect url="/tours" />Comment --%>
+
+			</c:otherwise>
+		</c:choose>
+	</ul>
+</nav>
+
+
+

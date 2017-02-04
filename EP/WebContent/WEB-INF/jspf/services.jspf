@@ -1,0 +1,22 @@
+<%@ page pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/jspf/directive/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+
+
+<fmt:message key="serv.tittle" var="titleValue" />
+<fmt:message key="serv.search" var="searchValue" />
+<fmt:message key="serv.insurance" var="insurValue" />
+<fmt:message key="serv.credit" var="creditValue" />
+
+
+<nav>
+	<h2>
+		<span>${titleValue}</span>
+	</h2>
+	<ul>
+		<li><a href="tours">${searchValue}</a></li>
+		<li><a href="#">travel sim</a></li>
+		<li><a href="#">${insurValue}</a></li>
+		<li><a href="#">${creditValue}</a></li>
+	</ul>
+</nav>

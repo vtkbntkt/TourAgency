@@ -1,0 +1,17 @@
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+
+<fmt:message key="nav.account" var="accValue" />
+<fmt:message key="nav.exit" var="exitValue" />
+
+
+	<c:if test="${not empty user}">
+		<div class="userinfo">
+			<ul>
+				<li><img src="res/img/person.png">${user.firstName}
+					${user.lastName}</li>
+				<li><img src="res/img/email.png">${user.email}</li>
+				<li><img src="res/img/acc.png"><a href="orders">${accValue}</a></li>
+				<li><img src="res/img/exit.png"><a href="logout">${exitValue}</a></li>
+			</ul>
+		</div>
+	</c:if>
